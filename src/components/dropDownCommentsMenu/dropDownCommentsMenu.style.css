@@ -1,0 +1,53 @@
+.comments_menu{
+    margin-left: -40px;
+    width: 580px;
+    background: #FFFFFF;
+    border-radius: 6px;
+}
+.comments_menu_item {
+    list-style-type: none;
+
+}
+
+hr{
+    margin-left: -80px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(112, 124, 151, 0.15);
+}
+
+.comments_menu_item_header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.comments_menu_item_header_userIcon {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.comments_menu_item_header_userName {
+    margin-right: 10px;
+    font-family: 'TT Norms';
+    font-size: 18px;
+    color: #0D1C2E;
+}
+
+.comments_menu_item_header_email {
+
+    font-family: 'TT Norms';
+    font-size: 18px;
+    color: #0D1C2E;
+}
+
+.comments_menu_item_text{
+    font-family: 'TT Norms';
+    font-size: 16px;
+    line-height: 26px;
+    color: #707C97;
+}

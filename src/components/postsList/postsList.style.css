@@ -1,0 +1,23 @@
+.postsList{
+    width: 600px;
+    max-height: 100%;
+    overflow: scroll;
+    overflow-x:hidden;
+    background-color: rgba(.1);
+    border-radius: 6px;
+    margin-right: 60px;
+}
+
+.postsList::-webkit-scrollbar {
+
+    width: 6px;
+}
+
+.postsList::-webkit-scrollbar-thumb {
+    height: 80px;
+    background: #B7BDCB;
+    box-shadow: 4px 4px 15px rgba(112, 124, 151, 0.05), 2px 2px 10px rgba(112, 124, 151, 0.1), 1px 1px 50px rgba(112, 124, 151, 0.15);
+    border-radius: 10px;
+}
+
+

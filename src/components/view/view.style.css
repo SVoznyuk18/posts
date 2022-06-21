@@ -1,0 +1,7 @@
+.section_view{
+    display: flex;
+    width: 1630px;
+    padding: 109px 60px 0 60px;
+    background: linear-gradient(180deg, #F3F3FB 0%, #FDFBFD 100%);
+}
+
