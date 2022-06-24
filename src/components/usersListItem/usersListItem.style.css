@@ -1,0 +1,32 @@
+.usersListItem {
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+.usersListItem_userIcon{
+    display: block;
+    margin-right: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.usersListItem_block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.usersListItem_block_name{
+    font-family: 'TT Norms';
+    font-weight: 700;
+    font-size: 14px;
+    color: #1A1C1D;
+}
+.usersListItem_block_email{
+    font-family: 'TT Norms';
+    font-weight: 400;
+    font-size: 14px;
+    color: #8083A3;
+}

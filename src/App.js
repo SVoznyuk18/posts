@@ -1,14 +1,12 @@
-
-import './App.css';
-import Nav from './components/navigation/Nav';
 import View from './components/view/View';
+import AddPost from './components/addPost/AddPost';
 
 function App() {
   return (
-    <main className="section_main">
-      <Nav/>
+    <>
       <View/>
-    </main>
+      <AddPost/>
+    </>
   );
 }
 

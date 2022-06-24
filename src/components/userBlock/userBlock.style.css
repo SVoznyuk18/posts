@@ -1,0 +1,21 @@
+.userBlock{
+    padding: 40px;
+    width: 580px;
+    height: calc(100% - 10%);
+    background: #FFFFFF;
+    border-radius: 6px;
+    overflow: scroll;
+    overflow-x:hidden;
+}
+
+.userBlock::-webkit-scrollbar {
+    width: 6px;
+}
+
+.userBlock::-webkit-scrollbar-thumb {
+    height: 80px;
+    background: #B7BDCB;
+    box-shadow: 4px 4px 15px rgba(112, 124, 151, 0.05), 2px 2px 10px rgba(112, 124, 151, 0.1), 1px 1px 50px rgba(112, 124, 151, 0.15);
+    border-radius: 10px;
+}
+

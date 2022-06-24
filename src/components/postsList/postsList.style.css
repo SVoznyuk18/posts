@@ -1,23 +1,50 @@
 .postsList{
     width: 600px;
+    height: calc(100% - 10%);
+    background-color: rgba(.1);
+}
+
+.postsList_items{
     max-height: 100%;
     overflow: scroll;
     overflow-x:hidden;
-    background-color: rgba(.1);
     border-radius: 6px;
-    margin-right: 60px;
 }
 
-.postsList::-webkit-scrollbar {
-
+.postsList_items::-webkit-scrollbar {
     width: 6px;
 }
 
-.postsList::-webkit-scrollbar-thumb {
+.postsList_items::-webkit-scrollbar-thumb {
     height: 80px;
     background: #B7BDCB;
     box-shadow: 4px 4px 15px rgba(112, 124, 151, 0.05), 2px 2px 10px rgba(112, 124, 151, 0.1), 1px 1px 50px rgba(112, 124, 151, 0.15);
     border-radius: 10px;
 }
 
+.postsList_header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.postsList_header_title {
+    font-family: 'TT Norms';
+    font-size: 36px;
+    color: #0D1C2E;
+}
+
+.postsList_btn{
+    margin-right: 20px;
+    width: 240px;
+    height: 60px;
+    background: linear-gradient(92.68deg, #7CB8F7 0%, #2A8BF2 100%);
+    box-shadow: 6px 6px 25px rgba(42, 139, 242, 0.15), 4px 4px 25px rgba(42, 139, 242, 0.05), 10px 6px 25px rgba(42, 139, 242, 0.15);
+    border-radius: 6px;
+    font-family: 'TT Norms';
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
 
