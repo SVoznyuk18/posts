@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
 import { fetchPosts } from "./postsListSlice";
+import { fetchComments } from "../dropDownCommentsMenu/commetsSlice";
 import { showUsersList } from '../usersList/usersListSlice';
 import { getUserId } from '../userInfo/userInfoSlice';
 import { showAddPost } from "../addPost/addPostSlice";
@@ -21,6 +22,7 @@ const PostsList = () => {
 
     useEffect(() => {
         dispatch(fetchPosts());
+        dispatch(fetchComments())
         // eslint-disable-next-line
     }, []);
 

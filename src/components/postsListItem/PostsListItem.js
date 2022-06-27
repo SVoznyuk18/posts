@@ -1,7 +1,4 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-
-import { fetchComments } from "../dropDownCommentsMenu/commetsSlice";
 
 import './postsListItem.style.css'
 import comentsPNG from '../../assets/Comment stroke icon.png';
@@ -12,7 +9,7 @@ const PostsListItem = (props) => {
     const { title, body, id, userId } = props.postsItem;
     const { createCommentsArr, getUserName, handleShowUserInfo } = props;
     const [showCommentsMenu, setShowCommentsMenu] = useState(false);
-    const dispatch = useDispatch();
+    //const dispatch = useDispatch();
 
     return (
         <div className={`postsListItem ${showCommentsMenu ? "postsListItem_active" : null}`}>
@@ -32,7 +29,7 @@ const PostsListItem = (props) => {
                 className={`postsListItem_btn_showComments ${showCommentsMenu ? "active_button" : null}`}
                 onClick={() => {
                     setShowCommentsMenu(!showCommentsMenu);
-                    dispatch(fetchComments());
+                    //dispatch(fetchComments());
                 }}
             >
                 {`${showCommentsMenu ? "Hide comments" : "Show comments"}`}
