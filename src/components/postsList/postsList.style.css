@@ -1,13 +1,13 @@
-.postsList{
+.postsList {
     width: 600px;
     height: calc(100% - 10%);
     background-color: rgba(.1);
 }
 
-.postsList_items{
+.postsList_items {
     max-height: 100%;
     overflow: scroll;
-    overflow-x:hidden;
+    overflow-x: hidden;
     border-radius: 6px;
 }
 
@@ -22,18 +22,19 @@
     border-radius: 10px;
 }
 
-.postsList_header{
+.postsList_header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
 }
+
 .postsList_header_title {
     font-family: 'TT Norms';
     font-size: 36px;
     color: #0D1C2E;
 }
 
-.postsList_btn{
+.postsList_btn {
     margin-right: 20px;
     width: 240px;
     height: 60px;
@@ -47,4 +48,3 @@
     border: none;
     cursor: pointer;
 }
-

@@ -14,9 +14,9 @@ const UsersList = () => {
     const dispatch = useDispatch();
     const { users, usersListShow, usersLoadingStatus } = useSelector(state => state.users);
 
-    useEffect(() => {
+  /*   useEffect(() => {
         dispatch(fetchUsers());
-    }, []);
+    }, []); */
 
     const showUserInfo = (id) => {
         dispatch(showUsersList(!usersListShow));

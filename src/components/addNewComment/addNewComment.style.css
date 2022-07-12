@@ -1,0 +1,38 @@
+.addComment_content {
+    margin-top: 10px;
+    display: flex;
+    position: relative;
+}
+
+.addComment_img {
+    margin-right: 20px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.addComment_content_box_textarea {
+    border-radius: 4px;
+    border-color: #2A8BF2;
+    width: 450px;
+    height: 80px;
+}
+
+.addComment_btn {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    background: #FFFFFF;
+}
+
+.addComment_btn_img {
+    width: 30px;
+    height: 30px;
+
+}

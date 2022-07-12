@@ -10,7 +10,7 @@ export const fetchComments = createAsyncThunk(
     'comments/fetchComments',
     async () => {
         const { request } = useHttp();
-        return await request('https://jsonplaceholder.typicode.com/comments')
+        return await request('http://localhost:3001/comments');
     }
 )
 
@@ -18,6 +18,12 @@ const commentsSlice = createSlice({
     name: 'comments',
     initialState,
     reducers: {
+        addNewComments: (state, action) => {
+            state.comments.push(action.payload);
+        },
+        deleteComments: (state, action) => {
+            state.comments = state.comments.filter(item => item.id !== action.payload);
+        }
     },
     extraReducers: (builder) => {
         builder
@@ -36,6 +42,7 @@ const commentsSlice = createSlice({
 });
 
 const { reducer, actions } = commentsSlice;
+export const { addNewComments, deleteComments } = actions;
 export default reducer;
 
 

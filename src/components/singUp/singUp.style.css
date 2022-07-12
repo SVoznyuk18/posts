@@ -1,33 +1,25 @@
-.addPost {
-    height: 100vh;
+.singUp {
+    display: block;
+    height: calc(100vh - 50px);
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.4);
-    position: fixed;
     display: flex;
     left: 0;
     top: 0;
     align-items: center;
     justify-content: center;
-    transform: scale(0);
 }
 
-.addPost_active {
+.singUp_active {
     transform: scale(1);
 }
 
-.addPost_header {
-    margin-bottom: 40px;
-    text-align: center;
-    color: #323432;
-    font-family: 'TT Norms';
-    opacity: 0.8;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 26px;
+.singUp_input_box {
+    margin-bottom: 15px;
 }
 
-.addPost_content {
-    min-width: 600px;
+.singUp_content {
+    min-width: 500px;
     min-height: 300px;
     padding: 20px 60px 20px 60px;
     border-radius: 6px;
@@ -36,31 +28,20 @@
     align-items: center;
     justify-content: center;
     background-color: white;
-    position: relative;
 }
 
-.addPost_close {
-    position: absolute;
-    font-size: 30px;
-    top: -15px;
-    right: -30px;
-    cursor: pointer;
-}
-
-.addPost_form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.addPost_content_box {
-    width: 100%;
+.singUp_header {
     margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
+    text-align: center;
+    color: #323432;
+    font-family: 'TT Norms';
+    opacity: 0.8;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
 }
 
-.addPost_content_box-lable {
+.singUp_content_lable {
     font-weight: 500;
     font-size: 18px;
     font-family: 'TT Norms';
@@ -68,7 +49,7 @@
     opacity: 0.8;
 }
 
-.addPost_content_box_input {
+.singUp_content_input {
     width: 356px;
     height: 46px;
     padding: 3px 10px 3px 10px;
@@ -77,24 +58,22 @@
     border-radius: 15px;
 }
 
-.addPost_content_box_textarea {
-    max-width: 356px;
-    height: 100px;
-    padding: 3px 10px 3px 10px;
-    background: #F9FAFF;
-    border: 1px solid #058ED9;
-    border-radius: 15px;
+.singUp_error {
+    display: block;
+    margin-left: 10px;
+    font-family: 'TT Norms';
+    color: black;
 }
 
-.addPost_content_btn {
+.singUp_btn {
     margin-right: 20px;
-    width: 240px;
-    height: 60px;
+    width: 200px;
+    height: 40px;
     background: linear-gradient(92.68deg, #7CB8F7 0%, #2A8BF2 100%);
     box-shadow: 6px 6px 25px rgba(42, 139, 242, 0.15), 4px 4px 25px rgba(42, 139, 242, 0.05), 10px 6px 25px rgba(42, 139, 242, 0.15);
     border-radius: 6px;
     font-family: 'TT Norms';
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     color: #FFFFFF;
     border: none;

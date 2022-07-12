@@ -1,0 +1,38 @@
+.navBarLogIn {
+    padding: 0 40px 0 40px;
+    width: 100%;
+    height: 50px;
+    background: #F4F8F9;
+}
+
+.navBarLogIn_container {
+    display: flex;
+    justify-content: end;
+}
+
+.navBarLogIn_item {
+    padding: 0 10px 0 10px;
+    height: 50px;
+    width: 100px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.navBarLogIn_item_link {
+    display: block;
+    text-align: center;
+    font-family: 'TT Norms';
+    color: black;
+    line-height: 50px;
+    height: 100%;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.navBarLogIn_item_active {
+    background: linear-gradient(92.68deg, #7CB8F7 0%, #2A8BF2 100%);
+    box-shadow: 6px 6px 25px rgba(42, 139, 242, 0.15), 4px 4px 25px rgba(42, 139, 242, 0.05), 10px 6px 25px rgba(42, 139, 242, 0.15);
+    border-radius: 6px;
+    color: #FFFFFF;
+}

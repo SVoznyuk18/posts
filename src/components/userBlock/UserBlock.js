@@ -5,7 +5,6 @@ import UserInfo from '../userInfo/UserInfo'
 import './userBlock.style.css';
 
 const Userblock = () => {
-
     const { usersListShow } = useSelector(state => state.users);
 
     return (

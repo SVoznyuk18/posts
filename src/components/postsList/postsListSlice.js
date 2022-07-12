@@ -10,7 +10,7 @@ export const fetchPosts = createAsyncThunk(
     'posts/fetchPosts',
     async () => {
         const { request } = useHttp();
-        return await request('https://jsonplaceholder.typicode.com/posts')
+        return await request('http://localhost:3001/posts')
     }
 );
 
@@ -19,7 +19,7 @@ const postsListSlice = createSlice({
     initialState,
     reducers: {
         addNewPost: (state, action) => {
-            state.posts.unshift(action.payload);
+            state.posts.push(action.payload);
         }
     },
     extraReducers: (builder) => {
@@ -39,8 +39,6 @@ const postsListSlice = createSlice({
 });
 
 const { reducer, actions } = postsListSlice;
-
 export default reducer;
-
 export const { addNewPost } = actions;
 

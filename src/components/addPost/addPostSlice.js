@@ -8,12 +8,12 @@ const addPostSlice = createSlice({
     name: 'addPost',
     initialState,
     reducers: {
-        showAddPost: (state, action) =>{
+        showAddPost: (state, action) => {
             state.modalActiveClass = action.payload;
         }
     }
 })
 
-const {reducer, actions} = addPostSlice;
+const { reducer, actions } = addPostSlice;
 export default reducer;
-export const {showAddPost} = actions;
+export const { showAddPost } = actions;

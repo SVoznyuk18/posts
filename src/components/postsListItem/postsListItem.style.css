@@ -6,7 +6,7 @@
     margin-bottom: 20px;
 }
 
-.postsListItem_header{
+.postsListItem_header {
     cursor: pointer;
     display: flex;
     justify-content: flex-start;
@@ -34,11 +34,11 @@
     color: #0D1C2E;
 }
 
-.postsListItem_description_box{
+.postsListItem_description_box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
+
 }
 
 .postsListItem_description_box_text {
@@ -49,7 +49,7 @@
     color: #707C97;
 }
 
-.postsListItem_box_amountComents{
+.postsListItem_box_amountComents {
     display: flex;
     align-items: center;
 }
@@ -66,9 +66,12 @@
     color: #687684;
 }
 
+.postsListItem_btn_btn_box {
+    display: flex;
+}
 
 .postsListItem_btn_showComments {
-    margin-top:  20px;
+    margin-top: 20px;
     background-color: Transparent;
     border: none;
     font-family: 'TT Norms';
@@ -76,23 +79,28 @@
     letter-spacing: -0.3px;
     color: #4C9EEB;
     cursor: pointer;
-    
 }
 
-
-
-
+.postsListItem_btn_addComments {
+    margin-top: 20px;
+    background-color: Transparent;
+    border: none;
+    font-family: 'TT Norms';
+    font-size: 16px;
+    letter-spacing: -0.3px;
+    color: #4C9EEB;
+    cursor: pointer;
+}
 
 .postsListItem_active {
     background: linear-gradient(96.78deg, #7CB8F7 0%, #2A8BF2 100%);
     padding-bottom: 0;
-    
 }
 
-.active_text{
+.active_text {
     color: #FFFFFF;
 }
 
-.active_button{
+.active_button {
     color: #FFFFFF;
 }

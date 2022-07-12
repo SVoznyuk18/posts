@@ -2,23 +2,25 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
 import { fetchPosts } from "./postsListSlice";
-import { fetchComments } from "../dropDownCommentsMenu/commetsSlice";
+import { fetchComments, deleteComments } from "../dropDownCommentsMenu/commetsSlice";
 import { showUsersList } from '../usersList/usersListSlice';
 import { getUserId } from '../userInfo/userInfoSlice';
 import { showAddPost } from "../addPost/addPostSlice";
-
 import PostsListItem from "../postsListItem/PostsListItem";
 import Spinner from '../spiner/Spiner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
-
 import './postsList.style.css';
+import { useHttp } from "../../hooks/https.hooks";
 
 const PostsList = () => {
 
     const dispatch = useDispatch();
-    const comments = useSelector(state => state.comments.comments);
+    const { request } = useHttp();
+    const { comments } = useSelector(state => state.comments);
+    const { userId } = useSelector(state => state.singIn);
     const { users, usersListShow } = useSelector(state => state.users);
     const { posts, postsLoadingStatus } = useSelector(state => state.posts);
+
 
     useEffect(() => {
         dispatch(fetchPosts());
@@ -31,19 +33,22 @@ const PostsList = () => {
         return arr;
     };
 
-    const getUserName = (userId) => {
-        const userName = users.map(item => {
-            if (item.id === userId) {
-                return item.name;
-            }
-        })
-        return userName;
+    const getAuthorInfo = (userId) => {
+        const info = users.find(item => item.id === userId);
+        return info;
     };
 
     const showUserInfo = (id) => {
         dispatch(showUsersList(!usersListShow));
         dispatch(getUserId(id));
     };
+
+    const deleteComment = (commentId) => {
+        request(`http://localhost:3001/comments/${commentId}`, 'DELETE')
+            .then(dispatch(deleteComments(commentId)))
+    }
+
+
 
     const renderPostsList = (arr, status) => {
         if (status === 'loading') {
@@ -55,8 +60,10 @@ const PostsList = () => {
                         key={item.id}
                         postsItem={item}
                         createCommentsArr={createCommentsArr}
-                        getUserName={getUserName}
+                        getAuthorInfo={getAuthorInfo}
                         handleShowUserInfo={showUserInfo}
+                        deleteComment={deleteComment}
+                        authUserId={userId}
                     />
                 )
             })

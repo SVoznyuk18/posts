@@ -1,20 +1,23 @@
-.comments_menu{
+.comments_menu {
     padding-top: 20px;
-    margin-top: 20px ;
+    margin-top: 20px;
     margin-left: -40px;
     width: 580px;
     background: #FFFFFF;
     border-radius: 6px;
 }
+
 .comments_menu_item {
-   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-right: 40px;
     margin-bottom: 20px;
     list-style-type: none;
     padding: 0 0 10px 20px;
 }
 
-hr{
+hr {
     margin-right: -40px;
     width: 580px;
     margin-top: 10px;
@@ -22,7 +25,7 @@ hr{
     border: 1px solid rgba(112, 124, 151, 0.15);
 }
 
-.comments_menu_item_header{
+.comments_menu_item_header {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -44,15 +47,24 @@ hr{
 }
 
 .comments_menu_item_header_email {
-
     font-family: 'TT Norms';
     font-size: 18px;
     color: #0D1C2E;
 }
 
-.comments_menu_item_text{
+.comments_menu_item_text {
     font-family: 'TT Norms';
     font-size: 16px;
     line-height: 26px;
     color: #707C97;
+}
+
+.deleteBtn_active {
+    border: none;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.deleteBtn_inActive {
+    display: none;
 }

@@ -11,7 +11,7 @@ export const fetchUsers = createAsyncThunk(
     'users/fetchUsers',
     async () => {
         const { request } = useHttp();
-        return await request('https://jsonplaceholder.typicode.com/users')
+        return await request('http://localhost:3001/users')
     }
 )
 
@@ -21,6 +21,9 @@ const userListSlice = createSlice({
     reducers: {
         showUsersList: (state, action) => {
             state.usersListShow = action.payload
+        },
+        addNewUser: (state, action) => {
+            state.users.push(action.payload)
         }
     },
     extraReducers: (builder) => {
@@ -41,4 +44,4 @@ const userListSlice = createSlice({
 
 const { reducer, actions } = userListSlice;
 export default reducer;
-export const { showUsersList } = actions;
+export const { showUsersList, addNewUser } = actions;
